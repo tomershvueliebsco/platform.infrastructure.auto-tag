@@ -16,7 +16,7 @@ class AutotagDefaultWorker {
   /* tagResource
   ** method: tagResource
   **
-  ** Do nothing
+  ** Do nothing.
   */
   tagResource() {
     let _this = this;
