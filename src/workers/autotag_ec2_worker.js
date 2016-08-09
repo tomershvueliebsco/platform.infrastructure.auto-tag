@@ -29,7 +29,8 @@ class AutotagEC2Worker extends AutotagDefaultWorker {
         _this.ec2.createTags({
           Resources: resources,
           Tags: [
-            _this.getAutotagPair()
+            _this.getAutotagPair(),
+			_this.getAutotagPair2()
           ]
         }, (err, res) => {
           if (err) {

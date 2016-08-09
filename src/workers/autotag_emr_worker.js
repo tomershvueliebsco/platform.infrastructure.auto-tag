@@ -29,7 +29,8 @@ class AutotagEMRWorker extends AutotagDefaultWorker {
         _this.emr.addTags({
           ResourceId: _this.getEMRClusterId(),
           Tags: [
-            _this.getAutotagPair()
+            _this.getAutotagPair(),
+			_this.getAutotagPair2()
           ]
         }, (err, res) => {
           if (err) {

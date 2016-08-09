@@ -26,6 +26,7 @@ class AutotagS3Worker extends AutotagDefaultWorker {
       });
       let tags = yield _this.getExistingTags();
       tags.push(_this.getAutotagPair());
+	  tags.push(_this.getAutotagPair2());
       tags = _this.touchReservedTagKeys(tags);
       yield _this.setTags(tags);
     });

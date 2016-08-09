@@ -1,5 +1,6 @@
 import AWS from 'aws-sdk';
-const AUTOTAG_TAG_NAME = 'AutoTag_Creator';
+const AUTOTAG_TAG_NAME = 'ExUserID';
+const AUTOTAG_TAG_DATE = 'ExCreationDate';
 const ROLE_PREFIX = 'arn:aws:iam::';
 const ROLE_SUFFIX = ':role';
 const DEFAULT_STACK_NAME = 'autotag';
@@ -88,18 +89,53 @@ class AutotagDefaultWorker {
 
   getAutotagPair() {
     return {
-      Key: this.getTagName(),
-      Value: this.getTagValue()
+      Key: this.getUserIDTagName(),
+      Value: this.getUserIDTagValue()
     };
   }
-
-  getTagName() {
+  
+  getAutotagPair2() {
+      return {
+        Key: this.getDateTagName(),
+        Value: this.getDateTagValue()
+      }
+  }
+  
+  getUserIDTagName() {
     return AUTOTAG_TAG_NAME;
   }
 
-  getTagValue() {
+  getUserIDTagValue() {
     return this.event.userIdentity.arn;
   }
+  getDateTagName() {
+	return AUTOTAG_TAG_DATE;
+  }
+  
+  getDateTagValue() {
+		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth() + 1;
+		var yyyy = today.getFullYear();
+		var hh = today.getHours();
+		var minmin = today.getMinutes();
+
+		if (dd < 10) {
+			dd = '0' + dd;
+		} 
+		if (mm < 10) {
+			mm = '0' + mm;	
+		} 
+		if (hh < 10) {
+			hh = '0' + hh;
+		}
+		if (minmin < 10) {
+			minmin = '0' + minmin;
+		}
+
+		today = yyyy + '-' + mm + '-' + dd + ' ' + hh + ':' + minmin + ' UTC';
+		return today;
+	}
 };
 
 export default AutotagDefaultWorker;

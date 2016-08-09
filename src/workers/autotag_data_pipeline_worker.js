@@ -31,7 +31,8 @@ class AutotagDataPipelineWorker extends AutotagDefaultWorker {
         _this.dataPipeline.addTags({
           pipelineId: _this.getDataPipelineId(),
           tags: [
-            _this.getAutotagPair()
+            _this.getAutotagPair(),
+			_this.getAutotagPair2()
           ]
         }, (err, res) => {
           if (err) {
@@ -53,6 +54,15 @@ class AutotagDataPipelineWorker extends AutotagDefaultWorker {
   getAutotagPair() {
     let pair = {};
     _.each(super.getAutotagPair(), function(val, key) {
+      pair[key.toLowerCase()] = val;
+    });
+
+    return pair;
+  }
+  
+  getAutotagPair2() {
+    let pair = {};
+    _.each(super.getAutotagPair2(), function(val, key) {
       pair[key.toLowerCase()] = val;
     });
 

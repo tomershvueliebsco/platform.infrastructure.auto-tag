@@ -29,7 +29,8 @@ class AutotagRDSWorker extends AutotagDefaultWorker {
         _this.rds.addTagsToResource({
           ResourceName: _this.getDbARN(),
           Tags: [
-            _this.getAutotagPair()
+            _this.getAutotagPair(),
+			_this.getAutotagPair2()
           ]
         }, (err, res) => {
           if (err) {

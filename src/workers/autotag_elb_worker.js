@@ -31,7 +31,8 @@ class AutotagELBWorker extends AutotagDefaultWorker {
             _this.getLoadBalancerName()
           ],
           Tags: [
-            _this.getAutotagPair()
+            _this.getAutotagPair(),
+			_this.getAutotagPair2()
           ]
         }, (err, res) => {
           if (err) {

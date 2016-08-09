@@ -31,9 +31,14 @@ class AutotagAutoscaleWorker extends AutotagDefaultWorker {
         tagConfig.ResourceId = _this.getAutoscalingGroupName();
         tagConfig.ResourceType = 'auto-scaling-group';
         tagConfig.PropagateAtLaunch = true;
+		let tagConfig2 = _this.getAutotagPair2();
+        tagConfig2.ResourceId = _this.getAutoscalingGroupName();
+        tagConfig2.ResourceType = 'auto-scaling-group';
+        tagConfig2.PropagateAtLaunch = true;
         _this.autoscaling.createOrUpdateTags({
           Tags: [
-            tagConfig
+            tagConfig,
+			tagConfig2
           ]
         }, (err, res) => {
           if (err) {
