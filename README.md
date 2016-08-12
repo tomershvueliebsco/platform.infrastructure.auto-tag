@@ -60,3 +60,4 @@ $ grunt run:babel  # runs interactively, issue ^C to existing
 ```
 
 Export the generated es5 `lib/` directory to AWS rather than the es6 `src/` directory.
+.
