@@ -20,7 +20,7 @@ We also host each release of AutoTag in public s3 buckets in each region, such t
 1. Name the stack "autotag" - this part is important, as the autotag code need to find the created resources through the API
 1. In the parameter section:
   * CloudTrailBucketName: Name the S3 bucket that the template will create.  This needs to be unique for the region, so select something specific
-  * CodeS3Bucket: This is the S3 bucket that the code is contained in. Keep this default unless you are using your own version of the code.
+  * CodeS3Bucket: This is the S3 bucket that the code is contained in. By default, it is `EBSCO-autotag-1.0.0.zip`. Keep this default unless you are using your own version of the code.
   * CodeS3Path: This is the version of AutoTag that you wish to deploy.  The default value `autotag-custom.zip` is the latest version
 
 ## Supported Resource Types

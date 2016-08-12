@@ -10,7 +10,7 @@
     "CodeS3Path" : {
       "Description" : "The path of the code zip file in the code bucket in S3",
       "Type" : "String",
-      "Default" : "autotag-custom.zip"
+      "Default" : "EBSCO-autotag-1.0.0.zip"
     },
     "CloudTrailBucketName" : {
       "Description" : "The name you want to give the bucket for your CloudTrail logs",
