@@ -11,6 +11,8 @@ rem ********************************************************************
 
 echo Transpiling code to ES5...
 call run_babel.cmd
+
+rem Change the next line as needed to point to your auto-tag directory.
 if not exist "C:\Program Files\Git\repos\auto-tag\lib\node_modules" (
 	echo Unarchiving node_modules.zip to lib\...
 	7za e node_modules.zip -olib\node_modules
