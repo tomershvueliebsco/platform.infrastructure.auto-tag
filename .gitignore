@@ -6,3 +6,5 @@ node_modules/
 sample*.js
 !test_create_instances.sh
 !node_modules.zip
+push-autotag.cmd
+URLs.txt
