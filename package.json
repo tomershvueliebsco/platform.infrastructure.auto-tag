@@ -12,7 +12,7 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "babel-cli": "^6.1.2",
+    "babel-cli": "^6.11.4",
     "babel-preset-es2015": "^6.1.2",
     "grunt": "^1.0.1",
     "grunt-run": "^0.5.0",
@@ -27,6 +27,8 @@
     "url": "git@github.com:GorillaStack/autotag.git"
   },
   "author": "Elliott Spira",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/gorillastack/autotag#readme"
+  "license": "BSD",
+  "homepage": "https://bitbucket.org/gorillastack/autotag#readme",
+  "readmeFilename": "README.md",
+  "gitHead": "70513e3f9d7802f97f332fe367415ff9860f1b00"
 }
