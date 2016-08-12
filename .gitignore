@@ -7,4 +7,5 @@ sample*.js
 !test_create_instances.sh
 !node_modules.zip
 urls.txt
-push_autotag.cmd
+push_autotag.bat
+cloud_formation_stack_creator.bat
