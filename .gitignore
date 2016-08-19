@@ -9,3 +9,4 @@ sample*.js
 urls.txt
 push_autotag.bat
 cloud_formation_stack_creator.bat
+keys.txt
