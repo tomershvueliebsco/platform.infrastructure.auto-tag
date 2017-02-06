@@ -5,7 +5,7 @@
     "CodeS3Bucket" : {
       "Description" : "The name of the code bucket in S3",
       "Type" : "String",
-      "Default" : "autotag-ebsco-code"
+      "Default" : "autotag-code-ebsco"
     },
     "CodeS3Path" : {
       "Description" : "The path of the code zip file in the code bucket in S3",
